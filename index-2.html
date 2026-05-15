@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Marketing Masterclass · Learn It. Use It. Profit.</title>
+
+<style>
+  /* ============================================================
+     MASTER STYLESHEET — AI MARKETING MASTERCLASS
+     Color Psychology Applied Throughout
+     ============================================================ */
+
+  :root {
+    --red:        #D72638;
+    --red-dark:   #a81d2a;
+    --yellow:     #F5C518;
+    --yellow-soft:#FFF3B0;
+    --black:      #0d0d0d;
+    --ink:        #1a1a1a;
+    --slate:      #2c2c2c;
+    --mid:        #444;
+    --muted:      #777;
+    --border:     #e0e0e0;
+    --white:      #ffffff;
+    --cream:      #fdf8f0;
+    --green:      #1e8c45;
+    --green-lite: #e6f5ec;
+    --gold:       #c9a227;
+    --font-head:  'Georgia', 'Times New Roman', serif;
+    --font-body:  'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    --font-sans:  'Trebuchet MS', 'Gill Sans', Optima, sans-serif;
+    --max:        680px;
+    --radius:     6px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.78;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── TOPBAR ── */
+  .topbar {
+    background: var(--black);
+    color: var(--yellow);
+    text-align: center;
+    padding: 10px 16px;
+    font-family: var(--font-sans);
+    font-size: 13.5px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(13,13,13,0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #222;
+    padding: 0 32px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 58px;
+  }
+  .nav-logo {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--yellow);
+    letter-spacing: -0.3px;
+  }
+  .nav-cta {
+    background: var(--red);
+    color: #fff;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 9px 22px;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    transition: background .2s;
+    letter-spacing: .03em;
+  }
+  .nav-cta:hover { background: var(--red-dark); }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--black);
+    padding: 64px 20px 52px;
+    text-align: center;
+  }
+
+  .hero .eyebrow {
+    display: inline-block;
+    background: var(--red);
+    color: var(--white);
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 2px;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-family: var(--font-head);
+    font-size: clamp(26px, 5vw, 44px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.22;
+    max-width: 640px;
+    margin: 0 auto 20px;
+  }
+
+  .hero h1 em {
+    color: var(--yellow);
+    font-style: normal;
+  }
+
+  .hero .deck {
+    color: #ccc;
+    font-size: 17px;
+    max-width: 520px;
+    margin: 0 auto 28px;
+    font-family: var(--font-sans);
+    line-height: 1.65;
+  }
+
+  .hero-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 28px;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-pills span {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    color: #ccc;
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.12);
+    padding: 6px 14px;
+    border-radius: 20px;
+  }
+
+  .stat-strip {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 28px;
+    margin-top: 28px;
+  }
+
+  .stat-strip span {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    color: #aaa;
+    letter-spacing: .03em;
+  }
+
+  .stat-strip span strong {
+    color: var(--yellow);
+    font-size: 15px;
+  }
+
+  /* ── STATS BAR ── */
+  .stats-bar {
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: center;
+    padding: 28px 20px;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .stat-item { text-align: center; }
+  .stat-num {
+    font-family: var(--font-head);
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--red);
+    line-height: 1.1;
+  }
+  .stat-label {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 3px;
+  }
+
+  /* ── LAYOUT WRAPPER ── */
+  .page {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* ── SECTION BREAKS ── */
+  section {
+    padding: 52px 0 8px;
+  }
+
+  /* ── TYPOGRAPHY ── */
+  h2 {
+    font-family: var(--font-head);
+    font-size: clamp(22px, 4vw, 32px);
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.28;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-family: var(--font-head);
+    font-size: clamp(18px, 3vw, 24px);
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.35;
+    margin-bottom: 14px;
+  }
+
+  p {
+    margin-bottom: 18px;
+    color: var(--ink);
+  }
+
+  p.lead {
+    font-size: 19px;
+    font-style: italic;
+    color: var(--slate);
+    border-left: 4px solid var(--red);
+    padding-left: 18px;
+    margin-bottom: 28px;
+  }
+
+  strong { font-weight: 700; }
+  em { font-style: italic; }
+  a { color: var(--red); text-decoration: underline; }
+
+  /* ── DIVIDER ── */
+  .divider {
+    border: none;
+    border-top: 2px solid var(--border);
+    margin: 44px 0;
+  }
+
+  .divider-red {
+    border: none;
+    border-top: 3px solid var(--red);
+    margin: 44px 0;
+  }
+
+  /* ── PULL QUOTE ── */
+  .pull-quote {
+    background: var(--yellow-soft);
+    border-left: 5px solid var(--yellow);
+    padding: 20px 22px;
+    margin: 28px 0;
+    border-radius: var(--radius);
+  }
+
+  .pull-quote p {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--black);
+    margin: 0;
+    font-family: var(--font-head);
+    line-height: 1.5;
+  }
+
+  /* ── BENEFITS LIST ── */
+  .benefit-list {
+    list-style: none;
+    margin: 20px 0 28px;
+    padding: 0;
+  }
+
+  .benefit-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 14px;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .benefit-list li::before {
+    content: "✓";
+    background: var(--green);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 700;
+    min-width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3px;
+    flex-shrink: 0;
+  }
+
+  /* ── MODULE LIST ── */
+  .module-list {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+    counter-reset: mod;
+  }
+
+  .module-list li {
+    counter-increment: mod;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .module-list li::before {
+    content: counter(mod, decimal-leading-zero);
+    background: var(--black);
+    color: var(--yellow);
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 700;
+    min-width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ── PATH GRID (from Dr03) ── */
+  .path-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 24px 0;
+  }
+
+  .path-card {
+    border-radius: 12px;
+    padding: 26px 22px;
+    border: 1.5px solid var(--border);
+    background: var(--white);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .path-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+  .path-card.featured { border: 2px solid var(--red); }
+
+  .path-badge {
+    position: absolute; top: 14px; right: 14px;
+    font-family: var(--font-sans);
+    font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    padding: 3px 10px; border-radius: 100px;
+  }
+  .path-badge.popular { background: var(--yellow-soft); color: var(--gold); }
+  .path-badge.new { background: var(--green-lite); color: var(--green); }
+  .path-icon { font-size: 26px; margin-bottom: 12px; display: block; }
+  .path-card h3 { font-size: 18px; margin-bottom: 8px; }
+  .path-card p { font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 14px; }
+
+  .path-features { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+  .path-features li { font-size: 13px; color: var(--slate); display: flex; align-items: flex-start; gap: 8px; }
+  .path-features li::before { content: '✓'; color: var(--green); font-weight: 700; font-size: 12px; margin-top: 1px; flex-shrink: 0; }
+
+  /* ── FUNNEL (from Dr03) ── */
+  .funnel-section {
+    background: var(--black);
+    border-radius: 14px;
+    padding: 40px 28px;
+    margin: 32px 0;
+  }
+  .funnel-section h3 {
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  .funnel-sub {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    color: #888;
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .funnel-wrap { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+  .f-step {
+    display: flex; align-items: center; justify-content: space-between;
+    border-radius: 8px; padding: 14px 22px;
+    transition: transform 0.15s;
+    cursor: default;
+  }
+  .f-step:hover { transform: scale(1.01); }
+  .f1 { background: #1a0a0a; width: 92%; }
+  .f2 { background: #3a1010; width: 80%; }
+  .f3 { background: var(--red); width: 68%; }
+  .f4 { background: #e05050; width: 56%; }
+  .f5 { background: var(--yellow); width: 44%; }
+  .f-title { font-family: var(--font-head); font-size: 14px; font-weight: 700; color: #fff; }
+  .f-desc { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 2px; }
+  .f5 .f-title, .f5 .f-desc { color: var(--black); }
+  .f5 .f-desc { color: var(--ink); }
+  .f-num { font-size: 13px; color: rgba(255,255,255,0.75); font-weight: 600; }
+  .f5 .f-num { color: var(--black); }
+  .f-arr { color: #444; font-size: 16px; line-height: 1; }
+
+  /* ── AUDIENCE GRID ── */
+  .audience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 24px 0;
+  }
+
+  .audience-card {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 16px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .audience-card .icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .audience-card strong {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 13.5px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: var(--black);
+  }
+
+  /* ── PROOF BLOCKS ── */
+  .proof-block {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px 20px;
+    margin: 16px 0;
+    position: relative;
+  }
+
+  .proof-block::before {
+    content: "\201C";
+    font-size: 64px;
+    color: var(--yellow);
+    position: absolute;
+    top: -8px; left: 14px;
+    font-family: Georgia, serif;
+    line-height: 1;
+  }
+
+  .proof-block p {
+    padding-left: 28px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.65;
+  }
+
+  .proof-block .proof-name {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--muted);
+    padding-left: 28px;
+  }
+
+  /* ── PRICE BOX ── */
+  .price-box {
+    background: var(--white);
+    border: 2.5px solid var(--black);
+    border-radius: var(--radius);
+    padding: 32px 24px;
+    text-align: center;
+    margin: 32px 0;
+  }
+
+  .price-box .was {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    color: var(--muted);
+    text-decoration: line-through;
+    margin-bottom: 4px;
+  }
+
+  .price-box .now {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--red);
+    font-family: var(--font-head);
+    line-height: 1.1;
+    margin-bottom: 6px;
+  }
+
+  .price-box .label {
+    font-family: var(--font-sans);
+    font-size: 13.5px;
+    color: var(--mid);
+    margin-bottom: 20px;
+  }
+
+  .price-box .includes {
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    color: var(--slate);
+  }
+
+  .price-box .includes span {
+    display: block;
+    padding: 3px 0;
+  }
+
+  .price-box .includes span::before {
+    content: "✔ ";
+    color: var(--green);
+    font-weight: 700;
+  }
+
+  /* ── GUARANTEE BOX ── */
+  .guarantee-box {
+    background: var(--green-lite);
+    border: 2px solid var(--green);
+    border-radius: var(--radius);
+    padding: 24px 22px;
+    margin: 28px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .guarantee-box .shield {
+    font-size: 36px;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  .guarantee-box h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+    color: var(--green);
+  }
+
+  .guarantee-box p {
+    font-size: 15px;
+    margin: 0;
+    color: var(--slate);
+    line-height: 1.65;
+  }
+
+  /* ── URGENCY BAR ── */
+  .urgency-bar {
+    background: var(--red);
+    color: var(--white);
+    text-align: center;
+    padding: 14px 20px;
+    font-family: var(--font-sans);
+    font-size: 15px;
+    font-weight: 700;
+    margin: 32px 0;
+    border-radius: var(--radius);
+    letter-spacing: .02em;
+  }
+
+  /* ── CTA BUTTON ── */
+  .cta-btn {
+    display: block;
+    width: 100%;
+    background: var(--red);
+    color: var(--white);
+    text-align: center;
+    font-family: var(--font-sans);
+    font-size: 18px;
+    font-weight: 700;
+    padding: 20px 28px;
+    border-radius: var(--radius);
+    border: none;
+    outline: none;
+    text-decoration: none;
+    letter-spacing: .03em;
+    margin: 8px auto;
+    transition: background .2s, transform .15s;
+    line-height: 1.3;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+
+  .cta-btn:hover {
+    background: var(--red-dark);
+    color: var(--white);
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+
+  .cta-btn .sub-line {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    opacity: .85;
+    margin-top: 4px;
+  }
+
+  /* ── SCARCITY ── */
+  .scarcity {
+    text-align: center;
+    font-family: var(--font-sans);
+    font-size: 13.5px;
+    color: var(--red);
+    font-weight: 600;
+    margin-top: 12px;
+    letter-spacing: .02em;
+  }
+
+  /* ── FAQ ── */
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 18px 0;
+  }
+
+  .faq-item h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+
+  .faq-item p {
+    font-size: 15.5px;
+    color: var(--mid);
+    margin: 0;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--black);
+    color: #888;
+    text-align: center;
+    padding: 36px 20px;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-top: 60px;
+  }
+
+  footer a { color: #aaa; }
+
+  /* ── SECTION LABEL ── */
+  .section-label {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 14px;
+    border-bottom: 2px solid var(--red);
+    padding-bottom: 3px;
+  }
+
+  /* ── ORNAMENT ── */
+  .ornament {
+    text-align: center;
+    color: var(--yellow);
+    font-size: 20px;
+    letter-spacing: 8px;
+    margin: 36px 0 20px;
+  }
+
+  /* ── STICKY CTA (mobile) ── */
+  .sticky-cta {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: var(--red);
+    color: var(--white);
+    text-align: center;
+    padding: 14px 20px;
+    font-family: var(--font-sans);
+    font-size: 16px;
+    font-weight: 700;
+    z-index: 999;
+    text-decoration: none;
+    letter-spacing: .02em;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+
+  @media (max-width: 640px) {
+    .sticky-cta { display: block; }
+    body { padding-bottom: 56px; }
+  }
+
+  /* ── FLOATING SIDE CTA (desktop) ── */
+  #floating-cta {
+    position: fixed;
+    right: 0; top: 50%;
+    transform: translateY(-50%);
+    z-index: 998;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  @media (max-width: 768px) { #floating-cta { display: none; } }
+
+  /* ── ANIMATION ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero h1, .hero .deck { animation: fadeUp .7s ease both; }
+  .hero .deck { animation-delay: .15s; }
+
+  mark {
+    background: var(--yellow);
+    color: var(--black);
+    padding: 1px 4px;
+    border-radius: 2px;
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 520px) {
+    body { font-size: 17px; }
+    .audience-grid { grid-template-columns: 1fr; }
+    .path-grid { grid-template-columns: 1fr; }
+    .hero { padding: 40px 16px 36px; }
+    .price-box .now { font-size: 40px; }
+    h2 { font-size: 22px; }
+    nav { padding: 0 16px; }
+  }
+
+  /* ── PROOF GALLERY SCROLLER ── */
+  @keyframes pgScrollL {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  @keyframes pgScrollR {
+    0%   { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
+  .pg-wrap {
+    width: 100%;
+    overflow: hidden;
+    background: var(--black);
+    padding: 28px 0;
+    margin: 0;
+  }
+  .pg-label {
+    text-align: center;
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 18px;
+    opacity: .7;
+  }
+  .pg-row {
+    display: flex;
+    gap: 14px;
+    width: max-content;
+    margin-bottom: 14px;
+  }
+  .pg-row:last-child { margin-bottom: 0; }
+  .pg-row-1 { animation: pgScrollL 44s linear infinite; }
+  .pg-row-2 { animation: pgScrollR 38s linear infinite; }
+  .pg-row:hover { animation-play-state: paused; }
+  .pg-card {
+    flex-shrink: 0;
+    width: 224px;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.08);
+    position: relative;
+    cursor: default;
+    transition: transform .2s;
+  }
+  .pg-card:hover { transform: scale(1.04); z-index: 10; }
+
+  /* card internals */
+  .pgc { width:100%; height:100%; padding:14px; display:flex; flex-direction:column; justify-content:space-between; box-sizing:border-box; }
+  .pgc-dark  { background:#0d0d0d; }
+  .pgc-cream { background:#fdf8f0; }
+  .pgc-wa    { background:#e5ddd5; }
+  .pgc-green { background:#0b1f12; }
+  .pgc-dash  { background:#ffffff; }
+  .pgc-insta { background:#fff; }
+
+  /* shared sub-elements */
+  .pgc-eyebrow { font-family:var(--font-sans); font-size:6.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--red); margin-bottom:5px; }
+  .pgc-h1 { font-family:var(--font-head); font-size:13px; font-weight:700; color:#fff; line-height:1.3; margin-bottom:5px; }
+  .pgc-h1 .yl { color:var(--yellow); }
+  .pgc-sub { font-family:var(--font-sans); font-size:6.5px; color:#888; margin-bottom:8px; }
+  .pgc-cta { display:inline-block; background:var(--red); color:#fff; font-family:var(--font-sans); font-size:6.5px; font-weight:700; padding:5px 10px; border-radius:4px; text-transform:uppercase; letter-spacing:.05em; }
+  .pgc-stats { display:flex; gap:10px; }
+  .pgc-stat { font-family:var(--font-sans); font-size:5.5px; color:#666; }
+  .pgc-stat strong { display:block; font-size:9px; color:var(--yellow); }
+
+  .pgc-nav { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+  .pgc-logo-bar { width:40px; height:6px; background:var(--yellow); border-radius:2px; }
+  .pgc-nav-links { display:flex; gap:5px; }
+  .pgc-nav-links span { width:20px; height:3.5px; background:#333; border-radius:2px; }
+
+  /* money card */
+  .pgc-money-big { text-align:center; }
+  .pgc-money-big .cur { font-family:var(--font-sans); font-size:9px; color:#1e8c45; vertical-align:top; margin-top:6px; display:inline-block; }
+  .pgc-money-big .amt { font-family:var(--font-head); font-size:30px; font-weight:700; color:#1e8c45; line-height:1; }
+  .pgc-money-big .lbl { font-family:var(--font-sans); font-size:6.5px; color:#888; }
+  .pgc-txn { display:flex; justify-content:space-between; align-items:center; padding:3px 0; border-bottom:0.5px solid #eee; }
+  .pgc-txn-name { font-family:var(--font-sans); font-size:6px; color:#333; }
+  .pgc-txn-time { font-family:var(--font-sans); font-size:5px; color:#aaa; }
+  .pgc-txn-amt  { font-family:var(--font-sans); font-size:6.5px; font-weight:700; color:#1e8c45; }
+
+  /* wa card */
+  .pgc-wa-header { background:#075e54; padding:5px 7px; border-radius:5px 5px 0 0; display:flex; align-items:center; gap:6px; margin:-14px -14px 8px; }
+  .pgc-wa-av { width:18px; height:18px; border-radius:50%; background:#128c7e; flex-shrink:0; }
+  .pgc-wa-name { font-family:var(--font-sans); font-size:7px; font-weight:700; color:#fff; }
+  .pgc-wa-st   { font-family:var(--font-sans); font-size:5.5px; color:#aee; }
+  .pgc-msg { max-width:82%; padding:5px 7px; border-radius:7px; font-family:var(--font-sans); font-size:6.5px; line-height:1.5; margin-bottom:4px; }
+  .pgc-msg-in  { background:#fff; color:#111; border-radius:0 7px 7px 7px; }
+  .pgc-msg-out { background:#dcf8c6; color:#111; align-self:flex-end; border-radius:7px 0 7px 7px; margin-left:auto; }
+  .pgc-hl { font-weight:700; color:#075e54; }
+
+  /* funnel card */
+  .pgc-funnel { display:flex; flex-direction:column; align-items:center; gap:3px; width:100%; }
+  .pgf-step { border-radius:4px; padding:4px 8px; font-family:var(--font-sans); font-size:6.5px; font-weight:700; color:#fff; text-align:center; }
+  .pgf1 { background:#2c2c2c; width:92%; }
+  .pgf2 { background:#4a1a1a; width:78%; }
+  .pgf3 { background:#8a1a1a; width:65%; }
+  .pgf4 { background:var(--red); width:52%; }
+  .pgf5 { background:var(--yellow); color:#111; width:40%; }
+  .pgf-arr { font-size:8px; color:#555; line-height:1; }
+
+  /* testi card */
+  .pgc-testi { border-left:3px solid var(--yellow); }
+  .pgc-stars { font-size:10px; color:var(--yellow); margin-bottom:5px; }
+  .pgc-quote { font-family:var(--font-body); font-size:7px; color:#333; line-height:1.6; font-style:italic; margin-bottom:8px; }
+  .pgc-quote strong { color:#1e8c45; font-style:normal; }
+  .pgc-author { display:flex; align-items:center; gap:6px; }
+  .pgc-av { width:20px; height:20px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-sans); font-size:7px; font-weight:700; color:#fff; flex-shrink:0; }
+  .pgc-name { font-family:var(--font-sans); font-size:6.5px; font-weight:700; color:#111; }
+  .pgc-role { font-family:var(--font-sans); font-size:5.5px; color:#888; }
+
+  /* analytics card */
+  .pgc-an-row { display:flex; align-items:center; gap:5px; margin-bottom:5px; }
+  .pgc-an-lbl { font-family:var(--font-sans); font-size:6px; color:#777; width:46px; flex-shrink:0; }
+  .pgc-an-bw  { flex:1; height:9px; background:#f0f0f0; border-radius:4px; overflow:hidden; }
+  .pgc-an-bf  { height:100%; border-radius:4px; }
+  .pgc-an-val { font-family:var(--font-sans); font-size:6.5px; font-weight:700; color:#333; width:26px; text-align:right; flex-shrink:0; }
+
+  /* live notif card */
+  .pgc-notif { display:flex; align-items:flex-start; gap:6px; background:#111; border-radius:5px; padding:5px 7px; margin-bottom:5px; border-left:2px solid #1e8c45; }
+  .pgc-notif-dot { width:6px; height:6px; border-radius:50%; background:#1e8c45; flex-shrink:0; margin-top:2px; }
+  .pgc-notif-text { font-family:var(--font-sans); font-size:6.5px; color:#ccc; line-height:1.45; }
+  .pgc-notif-text strong { color:var(--yellow); }
+  .pgc-notif-time { font-family:var(--font-sans); font-size:5.5px; color:#555; margin-left:auto; flex-shrink:0; }
+
+  /* ad card dark */
+  .pgc-ad-tag { font-family:var(--font-sans); font-size:6px; color:var(--yellow); font-weight:700; text-transform:uppercase; letter-spacing:.1em; border:1px solid rgba(245,197,24,.35); padding:2px 6px; border-radius:20px; display:inline-block; margin-bottom:7px; }
+  .pgc-ad-h { font-family:var(--font-head); font-size:12px; font-weight:700; color:#fff; line-height:1.3; margin-bottom:4px; }
+  .pgc-ad-h .yl { color:var(--yellow); }
+  .pgc-ad-sub { font-family:var(--font-sans); font-size:6.5px; color:#aaa; margin-bottom:8px; }
+  .pgc-ad-pills { display:flex; gap:5px; flex-wrap:wrap; }
+  .pgc-ad-pill { font-family:var(--font-sans); font-size:5.5px; background:rgba(255,255,255,.07); color:#ccc; padding:3px 6px; border-radius:20px; border:1px solid rgba(255,255,255,.1); }
+
+  /* email stats */
+  .pgc-es-grid { display:grid; grid-template-columns:1fr 1fr; gap:5px; }
+  .pgc-es { background:#f5f5f5; border-radius:4px; padding:5px 6px; }
+  .pgc-es-val { font-family:var(--font-head); font-size:13px; font-weight:700; color:#1a1a1a; line-height:1; }
+  .pgc-es-lbl { font-family:var(--font-sans); font-size:5.5px; color:#888; margin-top:1px; }
+  .pgc-es-bar { height:3px; background:#e0e0e0; border-radius:20px; margin-top:3px; }
+  .pgc-es-fill { height:3px; border-radius:20px; }
+
+  /* ── TICKER ── */
+  @keyframes ticker-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .ticker-track:hover { animation-play-state: paused; }
+
+  @keyframes benefits-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ── SCROLL STRIP (What You'll Learn) ── */
+  .scroll-outer { overflow: hidden; background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 18px 0; }
+  .scroll-track { display: flex; gap: 14px; animation: ticker-scroll 32s linear infinite; width: max-content; }
+  .scroll-track:hover { animation-play-state: paused; }
+  .learn-pill {
+    flex: 0 0 auto;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 10px; padding: 14px 18px;
+    display: flex; align-items: center; gap: 10px;
+    white-space: nowrap;
+  }
+  .pill-icon { font-size: 18px; }
+  .pill-text { font-size: 13px; font-weight: 700; color: var(--ink); font-family: var(--font-sans); }
+  .pill-sub { font-size: 11px; color: var(--muted); font-family: var(--font-sans); }
+</style>
+
+<!-- PAYSTACK INLINE -->
+<script src="https://js.paystack.co/v1/inline.js"></script>
+
+<style>
+  #ps-modal-overlay {
+    display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);
+    z-index:9999;align-items:center;justify-content:center;padding:20px;
+    overflow-y:auto;-webkit-overflow-scrolling:touch;
+  }
+  #ps-modal-overlay.open{display:flex;}
+  #ps-modal {
+    background:#fff;border-radius:10px;padding:36px 28px;max-width:420px;
+    width:100%;box-shadow:0 8px 40px rgba(0,0,0,.3);position:relative;margin:auto;
+  }
+  @media (max-width:480px){#ps-modal{padding:28px 18px;}#ps-modal h3{font-size:18px;}}
+  #ps-modal h3{font-family:Georgia,serif;font-size:20px;margin-bottom:6px;color:#1a1a1a;}
+  #ps-modal p.ps-sub{font-family:'Trebuchet MS',sans-serif;font-size:13px;color:#777;margin-bottom:22px;}
+  #ps-modal label{display:block;font-family:'Trebuchet MS',sans-serif;font-size:13px;font-weight:700;
+    color:#444;margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em;}
+  #ps-modal input{width:100%;border:1.5px solid #e0e0e0;border-radius:6px;padding:12px 14px;
+    font-size:15px;font-family:'Trebuchet MS',sans-serif;margin-bottom:18px;outline:none;transition:border .2s;}
+  #ps-modal input:focus{border-color:#D72638;}
+  #ps-modal-close{position:absolute;top:12px;right:16px;background:none;border:none;
+    font-size:22px;cursor:pointer;color:#aaa;line-height:1;}
+  #ps-modal-close:hover{color:#333;}
+  #ps-pay-btn{width:100%;background:#D72638;color:#fff;border:none;border-radius:6px;
+    padding:16px;font-family:'Trebuchet MS',sans-serif;font-size:17px;font-weight:700;
+    cursor:pointer;transition:background .2s;letter-spacing:.02em;
+    -webkit-appearance:none;appearance:none;touch-action:manipulation;outline:none;}
+  #ps-pay-btn:hover{background:#a81d2a;}
+  #ps-pay-btn:active{background:#a81d2a;transform:scale(.98);}
+  #ps-pay-btn:disabled{background:#ccc;cursor:not-allowed;}
+  #ps-secure{text-align:center;font-family:'Trebuchet MS',sans-serif;font-size:12px;color:#aaa;margin-top:12px;}
+</style>
+
+<!-- Payment Modal -->
+<div id="ps-modal-overlay">
+  <div id="ps-modal">
+    <button id="ps-modal-close" onclick="closePsModal()" title="Close">&times;</button>
+    <h3>Almost There. One Step Left.</h3>
+    <p class="ps-sub">Enter your details. You will be redirected to Paystack's secure checkout.</p>
+    <label for="ps-name">Your Name</label>
+    <input type="text" id="ps-name" placeholder="e.g. Chioma Okafor" autocomplete="name">
+    <label for="ps-email">Email Address</label>
+    <input type="email" id="ps-email" placeholder="e.g. chioma@gmail.com" autocomplete="email">
+    <button id="ps-pay-btn" onclick="startPaystack()">Pay ₦15,000 Securely →</button>
+    <p id="ps-secure">🔒 Secured by Paystack · Card · Transfer · USSD</p>
+    <a id="ps-wa-fallback" href="https://wa.me/2349066234662?text=I+want+to+join+the+AI+Masterclass+class.+Please+send+me+payment+details."
+      style="display:none;margin-top:14px;background:#25D366;color:#fff;text-decoration:none;
+      text-align:center;padding:13px;border-radius:6px;font-family:'Trebuchet MS',sans-serif;
+      font-size:15px;font-weight:700;width:100%;box-sizing:border-box;">
+      💬 Pay via WhatsApp instead → 09066234662
+    </a>
+  </div>
+</div>
+
+<script>
+  var PS_KEY    = 'pk_live_fcb9db202ffc9ee1dfeea633958980b45a3346d9';
+  var PS_AMOUNT = 1500000;
+
+  function openPsModal() {
+    var overlay = document.getElementById('ps-modal-overlay');
+    overlay.classList.add('open');
+    overlay.scrollTop = 0;
+    setTimeout(function(){ var f = document.getElementById('ps-name'); if(f) f.focus(); }, 100);
+  }
+
+  function closePsModal() {
+    document.getElementById('ps-modal-overlay').classList.remove('open');
+  }
+
+  document.getElementById('ps-modal-overlay').addEventListener('click', function(e) {
+    if (e.target === this) closePsModal();
+  });
+
+  function startPaystack() {
+    var name  = document.getElementById('ps-name').value.trim();
+    var email = document.getElementById('ps-email').value.trim();
+    if (!name)  { document.getElementById('ps-name').focus(); alert('Please enter your name.'); return; }
+    if (!email || !email.includes('@') || !email.includes('.')) {
+      document.getElementById('ps-email').focus(); alert('Please enter a valid email address.'); return;
+    }
+    var btn = document.getElementById('ps-pay-btn');
+    if (typeof PaystackPop === 'undefined') {
+      btn.style.display = 'none';
+      document.getElementById('ps-wa-fallback').style.display = 'block';
+      return;
+    }
+    btn.disabled = true;
+    btn.textContent = 'Opening Paystack...';
+    try {
+      var handler = PaystackPop.setup({
+        key: PS_KEY, email: email, amount: PS_AMOUNT, currency: 'NGN',
+        firstname: name.split(' ')[0], lastname: name.split(' ').slice(1).join(' ') || '',
+        label: 'AI Marketing Masterclass',
+        channels: ['card', 'bank_transfer', 'ussd', 'mobile_money'],
+        metadata: { custom_fields: [{ display_name:'Name', variable_name:'name', value: name }] },
+        callback: function(response) {
+          var paidName = name, paidEmail = email, paidRef = response.reference;
+          var waText = encodeURIComponent('Hi Prince! I just paid for the AI Marketing Masterclass.\n\nName: ' + paidName + '\nEmail: ' + paidEmail + '\nPayment Ref: ' + paidRef + '\n\nPlease add me to the class group. Thank you!');
+          closePsModal();
+          document.body.innerHTML = '<style>body{margin:0;padding:0;background:#0d0d0d;font-family:Arial,sans-serif;}.wlc-wrap{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px;text-align:center;}.wlc-card{background:#141414;border:1.5px solid #222;border-radius:16px;padding:44px 28px;max-width:480px;width:100%;box-shadow:0 12px 48px rgba(0,0,0,.5);}.wlc-badge{display:inline-block;background:#1e8c45;color:#fff;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:24px;}.wlc-tick{font-size:72px;margin-bottom:16px;line-height:1;}.wlc-h1{color:#fff;font-family:Georgia,serif;font-size:clamp(22px,5vw,30px);font-weight:700;margin:0 0 10px;line-height:1.3;}.wlc-name{color:#F5C518;}.wlc-sub{color:#888;font-size:14px;line-height:1.7;margin:14px 0 28px;max-width:380px;}.wlc-ref{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:8px;padding:14px 16px;margin-bottom:28px;}.wlc-ref-label{font-size:11px;color:#555;text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px;}.wlc-ref-val{color:#F5C518;font-size:15px;font-weight:700;letter-spacing:.05em;word-break:break-all;}.wlc-wa-btn{display:block;background:#25D366;color:#fff;text-decoration:none;padding:18px 24px;border-radius:8px;font-size:17px;font-weight:700;margin-bottom:14px;}.wlc-steps{text-align:left;background:#111;border-radius:8px;padding:18px 20px;margin-top:20px;}.wlc-step{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;font-size:14px;color:#aaa;line-height:1.55;}.wlc-step:last-child{margin-bottom:0;}.wlc-num{background:#D72638;color:#fff;font-size:11px;font-weight:700;min-width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}.wlc-footer{color:#333;font-size:12px;margin-top:24px;line-height:1.6;}</style><div class="wlc-wrap"><div class="wlc-card"><div class="wlc-badge">✓ Payment Confirmed</div><div class="wlc-tick">🎉</div><h1 class="wlc-h1">Welcome to the Class,<br><span class="wlc-name">' + paidName.split(' ')[0] + '.</span></h1><p class="wlc-sub">Your payment went through. You are officially in the AI Marketing Masterclass. Here is everything you need to get started right now.</p><div class="wlc-ref"><div class="wlc-ref-label">Payment Reference</div><div class="wlc-ref-val">' + paidRef + '</div></div><a class="wlc-wa-btn" href="https://wa.me/2349066234662?text=' + waText + '" target="_blank">💬 Tap Here to Join the WhatsApp Class Group</a><p style="color:#555;font-size:12px;margin:0 0 20px;">This sends your name, email and payment reference to Prince automatically. You will be added within minutes.</p><div class="wlc-steps"><div class="wlc-step"><div class="wlc-num">1</div><span>Tap the WhatsApp button above. Your details are sent to Prince automatically.</span></div><div class="wlc-step"><div class="wlc-num">2</div><span>Check <strong style="color:#fff;">' + paidEmail + '</strong> for your welcome email. Check spam if you do not see it in 5 minutes.</span></div><div class="wlc-step"><div class="wlc-num">3</div><span>You will be added to the WhatsApp class group and the first session details will be shared there.</span></div></div><p class="wlc-footer">🔒 Secured by Paystack · Reference saved · You are confirmed in this intake.</p></div></div>';
+        },
+        onClose: function() {
+          btn.disabled = false;
+          btn.textContent = 'Pay ₦15,000 Securely →';
+        }
+      });
+      handler.openIframe();
+    } catch(e) {
+      btn.disabled = false;
+      btn.textContent = 'Pay ₦15,000 Securely →';
+      btn.style.display = 'none';
+      document.getElementById('ps-wa-fallback').style.display = 'block';
+    }
+  }
+</script>
+</head>
+
+<body>
+
+<!-- FLOATING SIDE CTA (desktop) -->
+<div id="floating-cta">
+  <a onclick="openPsModal()" href="javascript:void(0)" style="
+    background:var(--red);color:#fff;font-family:var(--font-sans);font-size:13px;
+    font-weight:700;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;
+    padding:14px 12px;writing-mode:vertical-rl;text-orientation:mixed;
+    transform:rotate(180deg);border-radius:6px 0 0 6px;line-height:1.3;
+    box-shadow:-3px 0 12px rgba(0,0,0,.18);cursor:pointer;transition:background .2s, padding .2s;"
+    onmouseover="this.style.paddingLeft='18px'" onmouseout="this.style.paddingLeft='12px'">
+    Join Now · ₦15,000
+  </a>
+</div>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  ⚠ Only a few slots remaining. This intake closes soon.
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">✦ AI Marketing Masterclass</div>
+  <button class="nav-cta" onclick="openPsModal()">Join Now · ₦15,000</button>
+</nav>
+
+<!-- ================================================================
+     A — ATTENTION
+     ================================================================ -->
+
+<header class="hero">
+  <span class="eyebrow">Live Class · AI-Powered · Beginners Welcome</span>
+  <h1>How To Make Maximum Sales In Minimum Time Using AI.<em> Even If You Are Just Starting Out.</em></h1>
+
+  <p class="deck">
+    Learn to write ads that convert. Create a week of content in 30 minutes. Close more sales online — all with AI. Beginners are doing this right now.
+  </p>
+
+  <div class="hero-pills">
+    <span>✓ Write ads in under 10 minutes</span>
+    <span>✓ Build a 7-email sequence in 90 mins</span>
+    <span>✓ First sale in 21 days</span>
+    <span>✓ No tech experience needed</span>
+  </div>
+
+  <div class="stat-strip">
+    <span><strong>12 Modules</strong> of real strategy</span>
+    <span><strong>45-page</strong> field guide included</span>
+    <span><strong>21 days</strong> to transformation</span>
+    <span><strong>Zero</strong> tech experience needed</span>
+  </div>
+</header>
+
+<!-- SOCIAL PROOF TICKER -->
+<div style="background:#111;padding:0;overflow:hidden;border-top:1px solid #222;border-bottom:1px solid #222;">
+  <div style="display:flex;overflow:hidden;width:100%;">
+    <div class="ticker-track" style="display:flex;align-items:center;gap:0;white-space:nowrap;animation:ticker-scroll 40s linear infinite;">
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-right:1px solid #222;flex-shrink:0;">
+        <span style="color:var(--yellow);font-size:14px;">★★★★★</span>
+        <span style="font-family:var(--font-sans);font-size:13px;color:#ccc;">"₦187,000 in 4 days from a 7-email sequence."</span>
+        <span style="font-family:var(--font-sans);font-size:11px;color:#666;">— Chidera A.</span>
+      </div>
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-right:1px solid #222;flex-shrink:0;">
+        <span style="color:var(--yellow);font-size:14px;">★★★★★</span>
+        <span style="font-family:var(--font-sans);font-size:13px;color:#ccc;">"Conversion rate jumped from 2.1% to 6.8%."</span>
+        <span style="font-family:var(--font-sans);font-size:11px;color:#666;">— Adaeze O.</span>
+      </div>
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-right:1px solid #222;flex-shrink:0;">
+        <span style="color:var(--yellow);font-size:14px;">★★★★★</span>
+        <span style="font-family:var(--font-sans);font-size:13px;color:#ccc;">"₦450,000+ in new client revenue in 3 months."</span>
+        <span style="font-family:var(--font-sans);font-size:11px;color:#666;">— Ngozi I.</span>
+      </div>
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-right:1px solid #222;flex-shrink:0;">
+        <span style="color:var(--yellow);font-size:14px;">★★★★★</span>
+        <span style="font-family:var(--font-sans);font-size:13px;color:#ccc;">"Revenue went from ₦280k to ₦400k/month."</span>
+        <span style="font-family:var(--font-sans);font-size:11px;color:#666;">— Emeka T.</span>
+      </div>
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-right:1px solid #222;flex-shrink:0;">
+        <span style="color:var(--yellow);font-size:14px;">★★★★★</span>
+        <span style="font-family:var(--font-sans);font-size:13px;color:#ccc;">"5.2× ROI on my first profitable ad ever."</span>
+        <span style="font-family:var(--font-sans);font-size:11px;color:#666;">— Fatima M., Abuja</span>
+      </div>
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-right:1px solid #222;flex-shrink:0;">
+        <span style="color:var(--yellow);font-size:14px;">★★★★★</span>
+        <span style="font-family:var(--font-sans);font-size:13px;color:#ccc;">"Managing 2 business accounts at ₦50k/month."</span>
+        <span style="font-family:var(--font-sans);font-size:11px;color:#666;">— Kayode A.</span>
+      </div>
+      <!-- Duplicate for seamless loop -->
+      <div aria-hidden="true" style="display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-right:1px solid #222;flex-shrink:0;">
+        <span style="color:var(--yellow);font-size:14px;">★★★★★</span>
+        <span style="font-family:var(--font-sans);font-size:13px;color:#ccc;">"₦187,000 in 4 days from a 7-email sequence."</span>
+        <span style="font-family:var(--font-sans);font-size:11px;color:#666;">— Chidera A.</span>
+      </div>
+      <div aria-hidden="true" style="display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-right:1px solid #222;flex-shrink:0;">
+        <span style="color:var(--yellow);font-size:14px;">★★★★★</span>
+        <span style="font-family:var(--font-sans);font-size:13px;color:#ccc;">"Conversion rate jumped from 2.1% to 6.8%."</span>
+        <span style="font-family:var(--font-sans);font-size:11px;color:#666;">— Adaeze O.</span>
+      </div>
+      <div aria-hidden="true" style="display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-right:1px solid #222;flex-shrink:0;">
+        <span style="color:var(--yellow);font-size:14px;">★★★★★</span>
+        <span style="font-family:var(--font-sans);font-size:13px;color:#ccc;">"₦450,000+ in new client revenue in 3 months."</span>
+        <span style="font-family:var(--font-sans);font-size:11px;color:#666;">— Ngozi I.</span>
+      </div>
+      <div aria-hidden="true" style="display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-right:1px solid #222;flex-shrink:0;">
+        <span style="color:var(--yellow);font-size:14px;">★★★★★</span>
+        <span style="font-family:var(--font-sans);font-size:13px;color:#ccc;">"Revenue went from ₦280k to ₦400k/month."</span>
+        <span style="font-family:var(--font-sans);font-size:11px;color:#666;">— Emeka T.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat-item"><div class="stat-num">3,200+</div><div class="stat-label">Students enrolled</div></div>
+  <div class="stat-item"><div class="stat-num">21 Days</div><div class="stat-label">To your first sale</div></div>
+  <div class="stat-item"><div class="stat-num">12</div><div class="stat-label">Practical modules</div></div>
+  <div class="stat-item"><div class="stat-num">₦0</div><div class="stat-label">Extra tools needed</div></div>
+</div>
+
+<!-- ================================================================
+     I — INTEREST
+     ================================================================ -->
+
+<main>
+<div class="page">
+
+<section>
+  <span class="section-label">What This Class Does for You</span>
+
+  <p class="lead">This is a <strong>digital marketing class.</strong> AI is the tool that makes everything faster, cheaper, and easier — even for a complete beginner.</p>
+
+  <p>Think about every marketing task that feels slow or expensive right now.</p>
+
+  <p>Writing captions. Drafting ad copy. Building a landing page. Coming up with content ideas every week. Every single one of those tasks eating your time — and producing average results.</p>
+
+  <p>This class teaches you how to use AI to do all of it. Faster than you imagined. At a fraction of the cost. With zero technical background required.</p>
+
+  <p>You learn the marketing strategy. AI does the heavy lifting. You take the results.</p>
+
+  <div style="background:var(--black);border-left:5px solid var(--yellow);border-radius:0 8px 8px 0;padding:28px 26px;margin:36px 0;position:relative;overflow:hidden;">
+    <p style="font-family:var(--font-head);font-size:clamp(19px,3.5vw,26px);font-weight:700;color:var(--white);line-height:1.45;margin:0 0 14px;"><strong style="color:var(--yellow);">You need someone to take you by the hand.</strong><br>Not guessing. Not hoping. <em style="color:#ddd;">Knowing the exact path.</em></p>
+    <p style="font-family:var(--font-sans);font-size:clamp(15px,2.5vw,18px);font-weight:700;color:#ccc;line-height:1.6;margin:0;"><strong style="color:var(--white);">Someone who already knows everything you need to start earning.</strong> No guesswork. No trial and error. Just a clear, tested road map — handed to you step by step.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     PROOF GALLERY SCROLLER — 1 of 2
+     Position: After intro, before What You'll Learn
+     ═══════════════════════════════════════════════ -->
+<div class="pg-wrap" id="pg1-wrap">
+  <div class="pg-label">↔ Real Results. Real Students. Real Money. — Scroll to see</div>
+  <div class="pg-row pg-row-1" id="pg1-r1"></div>
+  <div class="pg-row pg-row-2" id="pg1-r2"></div>
+</div>
+<script>
+(function(){
+  var cards1 = [
+    /* 1 dark landing */
+    '<div class="pgc pgc-dark"><div><div class="pgc-nav"><div class="pgc-logo-bar"></div><div class="pgc-nav-links"><span></span><span></span><span></span></div></div><div class="pgc-eyebrow">AI Marketing Masterclass</div><div class="pgc-h1">Learn AI Marketing.<br><span class="yl">Start Earning.</span></div><div class="pgc-sub">21-day live training · ₦15,000 only</div><div class="pgc-cta">Join Now →</div></div><div class="pgc-stats"><div class="pgc-stat"><strong>3,200+</strong>students</div><div class="pgc-stat"><strong>21</strong>days</div><div class="pgc-stat"><strong>₦15k</strong>price</div></div></div>',
+    /* 2 whatsapp win */
+    '<div class="pgc pgc-wa" style="display:flex;flex-direction:column;"><div class="pgc-wa-header"><div class="pgc-wa-av"></div><div><div class="pgc-wa-name">AI Class Results</div><div class="pgc-wa-st">online</div></div></div><div class="pgc-msg pgc-msg-in">Bro I just made my <span class="pgc-hl">first ₦45,000</span> from a client using exactly what we learned in module 3 😭🙏</div><div class="pgc-msg pgc-msg-out">Congrats! The AI copywriting framework works every time. ✓✓</div><div class="pgc-msg pgc-msg-in">I was skeptical but this is real. Joining next cohort too.</div></div>',
+    /* 3 money transfer */
+    '<div class="pgc pgc-dash"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;"><span style="font-family:var(--font-sans);font-size:7.5px;font-weight:700;color:#111;">Opay Business</span><span style="font-family:var(--font-sans);font-size:6px;background:#1e8c45;color:#fff;padding:2px 6px;border-radius:20px;">● Live</span></div><div class="pgc-money-big"><span class="cur">₦</span><span class="amt">127,500</span><div class="lbl">received this week</div></div><div style="margin-top:8px;"><div class="pgc-txn"><div><div class="pgc-txn-name">Client: Chidi Stores</div><div class="pgc-txn-time">Today 2:14 PM</div></div><div class="pgc-txn-amt">+₦45,000</div></div><div class="pgc-txn"><div><div class="pgc-txn-name">Course Sale</div><div class="pgc-txn-time">Today 10:08 AM</div></div><div class="pgc-txn-amt">+₦15,000</div></div><div class="pgc-txn"><div><div class="pgc-txn-name">Retainer — Ads</div><div class="pgc-txn-time">Yesterday</div></div><div class="pgc-txn-amt">+₦67,500</div></div></div></div>',
+    /* 4 ad creative */
+    '<div class="pgc pgc-dark" style="background:#0d0d1a;"><div><div class="pgc-ad-tag">Sponsored · AI Tools</div><div class="pgc-ad-h">Turn <span class="yl">ChatGPT</span><br>Into a Sales Machine</div><div class="pgc-ad-sub">Generate clients, content & cash — with AI</div><div class="pgc-ad-pills"><div class="pgc-ad-pill">3,200 students</div><div class="pgc-ad-pill">₦387k avg</div><div class="pgc-ad-pill">21 days</div></div></div><div class="pgc-cta" style="margin-top:8px;">Get Started →</div></div>',
+    /* 5 idea to money funnel */
+    '<div class="pgc pgc-cream" style="align-items:center;"><div style="font-family:var(--font-sans);font-size:7.5px;font-weight:700;color:#333;margin-bottom:6px;text-align:center;">Idea → Money System</div><div class="pgc-funnel"><div class="pgf-step pgf1">💡 Idea / Skill</div><div class="pgf-arr">↓</div><div class="pgf-step pgf2">🤖 AI Creates Content</div><div class="pgf-arr">↓</div><div class="pgf-step pgf3">🖥 Landing Page Live</div><div class="pgf-arr">↓</div><div class="pgf-step pgf4">📣 Ads Running</div><div class="pgf-arr">↓</div><div class="pgf-step pgf5">💰 SALES</div></div></div>',
+    /* 6 testimonial */
+    '<div class="pgc pgc-cream pgc-testi"><div class="pgc-stars">★★★★★</div><div class="pgc-quote">"Joined with zero experience. By week 2 I had already closed a <strong>₦120,000 client deal</strong> using the AI scripts from module 5."</div><div class="pgc-author"><div class="pgc-av" style="background:var(--red);">AO</div><div><div class="pgc-name">Abiodun Okafor</div><div class="pgc-role">Freelance Marketer · Lagos</div></div></div></div>',
+    /* 7 live activity */
+    '<div class="pgc pgc-green" style="padding:12px;"><div style="font-family:var(--font-sans);font-size:6.5px;color:#555;text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:8px;">Live Activity</div><div class="pgc-notif"><div class="pgc-notif-dot"></div><div class="pgc-notif-text"><strong>Kemi A.</strong> just joined from Ibadan</div><div class="pgc-notif-time">2m ago</div></div><div class="pgc-notif"><div class="pgc-notif-dot"></div><div class="pgc-notif-text"><strong>Emeka O.</strong> earned <strong style="color:#1e8c45;">₦45k</strong> this week</div><div class="pgc-notif-time">5m ago</div></div><div class="pgc-notif"><div class="pgc-notif-dot"></div><div class="pgc-notif-text"><strong>Fatima M.</strong> closed first client deal</div><div class="pgc-notif-time">12m ago</div></div><div class="pgc-notif"><div class="pgc-notif-dot"></div><div class="pgc-notif-text"><strong>Bolu S.</strong> just joined from Abuja</div><div class="pgc-notif-time">18m ago</div></div></div>',
+    /* 8 email stats */
+    '<div class="pgc pgc-cream"><div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;"><div style="width:20px;height:20px;background:var(--red);border-radius:4px;display:flex;align-items:center;justify-content:center;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div style="font-family:var(--font-sans);font-size:7.5px;font-weight:700;color:#111;">AI Class Launch Email</div><div style="font-family:var(--font-sans);font-size:5.5px;color:#888;">4,200 subscribers</div></div></div><div class="pgc-es-grid"><div class="pgc-es"><div class="pgc-es-val">61%</div><div class="pgc-es-lbl">Open Rate</div><div class="pgc-es-bar"><div class="pgc-es-fill" style="width:61%;background:var(--red);"></div></div></div><div class="pgc-es"><div class="pgc-es-val">28%</div><div class="pgc-es-lbl">Click Rate</div><div class="pgc-es-bar"><div class="pgc-es-fill" style="width:28%;background:var(--yellow);"></div></div></div><div class="pgc-es"><div class="pgc-es-val">₦387k</div><div class="pgc-es-lbl">Revenue</div><div class="pgc-es-bar"><div class="pgc-es-fill" style="width:90%;background:#1e8c45;"></div></div></div><div class="pgc-es"><div class="pgc-es-val">193</div><div class="pgc-es-lbl">Sales</div><div class="pgc-es-bar"><div class="pgc-es-fill" style="width:45%;background:#1a6eb5;"></div></div></div></div></div>',
+    /* 9 light landing page */
+    '<div class="pgc pgc-cream"><div class="pgc-nav"><div style="font-family:var(--font-head);font-size:8px;font-weight:700;color:#0d0d0d;">AI Marketing Pro</div><div style="font-family:var(--font-sans);font-size:6px;background:#0d0d0d;color:#fff;padding:3px 7px;border-radius:3px;">Enroll</div></div><div style="font-family:var(--font-sans);font-size:6px;background:var(--red);color:#fff;padding:2px 7px;border-radius:20px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;display:inline-block;margin-bottom:6px;">New Intake Open</div><div style="font-family:var(--font-head);font-size:12px;font-weight:700;color:#0d0d0d;line-height:1.3;margin-bottom:5px;">The <em style="color:var(--red);font-style:normal;">Fastest</em> Way<br>to Get Paid with AI</div><div style="font-family:var(--font-sans);font-size:6.5px;color:#555;line-height:1.6;margin-bottom:7px;">Join 3,200+ Nigerians who now use AI to attract clients, write ads, and earn consistently.</div><div class="pgc-cta">Secure Your Spot · ₦15,000 →</div></div>',
+    /* 10 WA win 2 */
+    '<div class="pgc pgc-wa" style="display:flex;flex-direction:column;"><div class="pgc-wa-header"><div class="pgc-wa-av"></div><div><div class="pgc-wa-name">Instructor Chat</div><div class="pgc-wa-st">online</div></div></div><div class="pgc-msg pgc-msg-in">Please I want to share my win — <span class="pgc-hl">₦85,000 from Instagram ads</span> I ran for a client. Module 7 template! 🔥</div><div class="pgc-msg pgc-msg-out">This is what we are here for 🔥 Keep going! ✓✓</div><div class="pgc-msg pgc-msg-in">Already got 2 more clients asking for same service 🙏</div></div>',
+    /* 11 testi 2 */
+    '<div class="pgc pgc-cream pgc-testi"><div class="pgc-stars">★★★★★</div><div class="pgc-quote">"I sell wigs online. After this class I set up an AI chatbot that handles DMs and closes sales for me. Made <strong>₦210,000</strong> while I was asleep."</div><div class="pgc-author"><div class="pgc-av" style="background:var(--yellow);color:#111;">NB</div><div><div class="pgc-name">Ngozi Bright</div><div class="pgc-role">E-commerce · Port Harcourt</div></div></div></div>',
+    /* 12 analytics */
+    '<div class="pgc pgc-cream"><div style="font-family:var(--font-sans);font-size:7px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;">Funnel Performance</div><div class="pgc-an-row"><div class="pgc-an-lbl">Ad Clicks</div><div class="pgc-an-bw"><div class="pgc-an-bf" style="width:95%;background:var(--red);"></div></div><div class="pgc-an-val">4,820</div></div><div class="pgc-an-row"><div class="pgc-an-lbl">Page Views</div><div class="pgc-an-bw"><div class="pgc-an-bf" style="width:80%;background:#c44;"></div></div><div class="pgc-an-val">3,860</div></div><div class="pgc-an-row"><div class="pgc-an-lbl">Leads</div><div class="pgc-an-bw"><div class="pgc-an-bf" style="width:55%;background:var(--yellow);"></div></div><div class="pgc-an-val">2,140</div></div><div class="pgc-an-row"><div class="pgc-an-lbl">Checkouts</div><div class="pgc-an-bw"><div class="pgc-an-bf" style="width:30%;background:#c9a227;"></div></div><div class="pgc-an-val">1,080</div></div><div class="pgc-an-row"><div class="pgc-an-lbl">Sales</div><div class="pgc-an-bw"><div class="pgc-an-bf" style="width:18%;background:#1e8c45;"></div></div><div class="pgc-an-val">193</div></div></div>'
+  ];
+  function makeCard(html) {
+    var d = document.createElement('div');
+    d.className = 'pg-card';
+    d.innerHTML = html;
+    return d;
+  }
+  function fillPgRow(id, start, count, rev) {
+    var row = document.getElementById(id);
+    var sel = [];
+    for (var i = 0; i < count; i++) sel.push(cards1[(start + i) % cards1.length]);
+    if (rev) sel.reverse();
+    sel.concat(sel).forEach(function(h){ row.appendChild(makeCard(h)); });
+  }
+  fillPgRow('pg1-r1', 0, 7, false);
+  fillPgRow('pg1-r2', 5, 7, true);
+})();
+</script>
+
+<!-- WHAT YOU'LL LEARN STRIP -->
+<div style="padding:8px 0 0;">
+  <div style="margin-bottom:12px;">
+    <span class="section-label">What You'll Learn</span>
+    <h2 style="margin-bottom:4px;">Everything. AI Does the Heavy Lifting.</h2>
+  </div>
+</div>
+<div class="scroll-outer">
+  <div class="scroll-track" id="track"></div>
+</div>
+
+<hr class="divider">
+
+<!-- YOUR PATH -->
+<section>
+  <span class="section-label">Your Path to Income</span>
+  <h2>Have a Product Already? We'll Sell It with AI. No Product Yet? We'll Find You One.</h2>
+
+  <p>Most people get stuck before they even begin. They either have a product and don't know how to sell it — or they have no product at all and think that's a dealbreaker.</p>
+
+  <p>It is not. This class covers both paths.</p>
+
+  <div class="path-grid">
+    <div class="path-card featured">
+      <span class="path-badge popular">Most chosen</span>
+      <span class="path-icon">📦</span>
+      <h3>I Have a Product</h3>
+      <p>Bring your digital product — course, ebook, template, or service. We'll use AI to build your landing page, write your ads, and set up your funnel.</p>
+      <ul class="path-features">
+        <li>AI-written sales copy</li>
+        <li>Landing page built in minutes</li>
+        <li>Ad creatives with AI</li>
+        <li>Full funnel automation setup</li>
+        <li>Launch in under 7 days</li>
+      </ul>
+    </div>
+    <div class="path-card">
+      <span class="path-badge new">Beginner friendly</span>
+      <span class="path-icon">🔍</span>
+      <h3>I Need a Product</h3>
+      <p>No product? We'll teach you how to find a profitable digital product or affiliate offer — fast. Zero inventory needed.</p>
+      <ul class="path-features">
+        <li>Find winning niches with AI</li>
+        <li>Top affiliate platforms walkthrough</li>
+        <li>Pick products that already sell</li>
+        <li>Zero inventory needed</li>
+        <li>Earn commissions from day one</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- AI BENEFITS SECTION -->
+<section>
+  <span class="section-label">What AI Makes Possible</span>
+  <h2>Everything You Struggle With Right Now — AI Already Knows How to Do It.</h2>
+
+  <p>This is not about replacing your thinking. It is about removing the bottlenecks.</p>
+
+  <p>When you learn to use AI the right way, you can:</p>
+
+  <ul class="benefit-list">
+    <li>Write high-converting ad copy in under 10 minutes</li>
+    <li>Build a 7-email sales sequence in a single sitting</li>
+    <li>Create a week of social content in 30 minutes or less</li>
+    <li>Set up a complete sales funnel — landing page, emails, follow-ups — from one brief</li>
+    <li>Find and target customers who actually want what you're selling</li>
+    <li>Stand out consistently when everyone else looks the same</li>
+  </ul>
+
+  <div class="pull-quote">
+    <p>The question is not whether AI will change how marketing works in Nigeria. It already has. The question is whether you will be using it — or watching everyone else get results you are not.</p>
+  </div>
+
+  <p>Technology has removed every excuse the beginner used to have.</p>
+
+  <p>You do not need a big budget. You do not need a laptop. You do not need years of study. You need the right framework — and someone to walk you through it step by step.</p>
+
+  <p>That is what this class is.</p>
+</section>
+
+<!-- BENEFITS SCROLL STRIP -->
+<div style="background:#0d0d0d;border-top:1px solid #222;border-bottom:1px solid #222;padding:0;overflow:hidden;margin:8px 0 36px;">
+  <div style="display:flex;overflow:hidden;width:100%;">
+    <div style="display:flex;align-items:stretch;gap:0;white-space:nowrap;animation:benefits-scroll 55s linear infinite;">
+      <div style="display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-right:1px solid #1e1e1e;flex-shrink:0;"><span style="font-size:20px;">💰</span><span style="font-family:var(--font-sans);font-size:14px;color:#e0e0e0;font-weight:600;">Write ads that sell — in under 10 minutes</span></div>
+      <div style="display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-right:1px solid #1e1e1e;flex-shrink:0;"><span style="font-size:20px;">📱</span><span style="font-family:var(--font-sans);font-size:14px;color:#e0e0e0;font-weight:600;">Do all of this from your phone. No laptop needed</span></div>
+      <div style="display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-right:1px solid #1e1e1e;flex-shrink:0;"><span style="font-size:20px;">🚀</span><span style="font-family:var(--font-sans);font-size:14px;color:#e0e0e0;font-weight:600;">Get your first real sale within 21 days</span></div>
+      <div style="display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-right:1px solid #1e1e1e;flex-shrink:0;"><span style="font-size:20px;">🧠</span><span style="font-family:var(--font-sans);font-size:14px;color:#e0e0e0;font-weight:600;">Think like a marketing expert — even as a beginner</span></div>
+      <div style="display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-right:1px solid #1e1e1e;flex-shrink:0;"><span style="font-size:20px;">✉️</span><span style="font-family:var(--font-sans);font-size:14px;color:#e0e0e0;font-weight:600;">Build a 7-email sales sequence in one sitting</span></div>
+      <div style="display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-right:1px solid #1e1e1e;flex-shrink:0;"><span style="font-size:20px;">🎯</span><span style="font-family:var(--font-sans);font-size:14px;color:#e0e0e0;font-weight:600;">Find customers who actually want what you're selling</span></div>
+      <div style="display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-right:1px solid #1e1e1e;flex-shrink:0;"><span style="font-size:20px;">🏆</span><span style="font-family:var(--font-sans);font-size:14px;color:#e0e0e0;font-weight:600;">Stand out online when everyone else looks the same</span></div>
+      <div style="display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-right:1px solid #1e1e1e;flex-shrink:0;"><span style="font-size:20px;">💼</span><span style="font-family:var(--font-sans);font-size:14px;color:#e0e0e0;font-weight:600;">Land ₦50k–₦200k/month client deals with confidence</span></div>
+      <!-- Duplicate -->
+      <div aria-hidden="true" style="display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-right:1px solid #1e1e1e;flex-shrink:0;"><span style="font-size:20px;">💰</span><span style="font-family:var(--font-sans);font-size:14px;color:#e0e0e0;font-weight:600;">Write ads that sell — in under 10 minutes</span></div>
+      <div aria-hidden="true" style="display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-right:1px solid #1e1e1e;flex-shrink:0;"><span style="font-size:20px;">📱</span><span style="font-family:var(--font-sans);font-size:14px;color:#e0e0e0;font-weight:600;">Do all of this from your phone. No laptop needed</span></div>
+      <div aria-hidden="true" style="display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-right:1px solid #1e1e1e;flex-shrink:0;"><span style="font-size:20px;">🚀</span><span style="font-family:var(--font-sans);font-size:14px;color:#e0e0e0;font-weight:600;">Get your first real sale within 21 days</span></div>
+      <div aria-hidden="true" style="display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-right:1px solid #1e1e1e;flex-shrink:0;"><span style="font-size:20px;">🧠</span><span style="font-family:var(--font-sans);font-size:14px;color:#e0e0e0;font-weight:600;">Think like a marketing expert — even as a beginner</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     PROOF GALLERY SCROLLER — 2 of 2
+     Position: Before DESIRE / price build-up
+     ═══════════════════════════════════════════════ -->
+<div class="pg-wrap" id="pg2-wrap" style="background:#0a0a0a;border-top:3px solid var(--red);border-bottom:3px solid var(--red);">
+  <div class="pg-label" style="color:var(--red);">↔ See what students are already building — and earning</div>
+  <div class="pg-row pg-row-1" id="pg2-r1"></div>
+  <div class="pg-row pg-row-2" id="pg2-r2"></div>
+</div>
+<script>
+(function(){
+  var cards2 = [
+    /* big money card */
+    '<div class="pgc pgc-dash"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><span style="font-family:var(--font-sans);font-size:7.5px;font-weight:700;color:#111;">Monthly Revenue Dashboard</span><span style="font-family:var(--font-sans);font-size:6px;background:#1e8c45;color:#fff;padding:2px 6px;border-radius:20px;">▲ 64%</span></div><div class="pgc-money-big"><span class="cur" style="color:var(--red);">₦</span><span class="amt" style="color:var(--red);font-size:28px;">387,000</span><div class="lbl">This month vs ₦236k last month</div></div><div style="display:flex;align-items:flex-end;gap:4px;height:38px;margin-top:8px;"><div style="flex:1;border-radius:3px 3px 0 0;background:var(--red);opacity:.5;height:35%;"></div><div style="flex:1;border-radius:3px 3px 0 0;background:var(--red);opacity:.6;height:45%;"></div><div style="flex:1;border-radius:3px 3px 0 0;background:var(--red);opacity:.7;height:52%;"></div><div style="flex:1;border-radius:3px 3px 0 0;background:var(--red);opacity:.8;height:68%;"></div><div style="flex:1;border-radius:3px 3px 0 0;background:var(--red);height:80%;"></div><div style="flex:1;border-radius:3px 3px 0 0;background:var(--yellow);height:100%;"></div></div></div>',
+    /* wa win 3 */
+    '<div class="pgc pgc-wa" style="display:flex;flex-direction:column;"><div class="pgc-wa-header"><div class="pgc-wa-av"></div><div><div class="pgc-wa-name">Class WhatsApp Group</div><div class="pgc-wa-st">142 participants</div></div></div><div class="pgc-msg pgc-msg-in">Update: that landing page I built in module 4 just hit <span class="pgc-hl">₦500,000 in sales</span>. Took me 45 mins to build 🤯</div><div class="pgc-msg pgc-msg-out">This is why we do this. Congratulations!! 🎉 ✓✓</div><div class="pgc-msg pgc-msg-in">Using AI for ads now too. Results are crazy 🙏</div></div>',
+    /* testi 3 */
+    '<div class="pgc pgc-cream pgc-testi"><div class="pgc-stars">★★★★★</div><div class="pgc-quote">"I run a tailoring business. This class taught me to run FB ads with AI. I now get <strong>15–20 new orders a week</strong> from Instagram. Never thought this was possible."</div><div class="pgc-author"><div class="pgc-av" style="background:#1e8c45;">TA</div><div><div class="pgc-name">Taiwo Adeyemi</div><div class="pgc-role">Business Owner · Ibadan</div></div></div></div>',
+    /* insta ad card */
+    '<div class="pgc pgc-dark" style="background:#000;padding:0;overflow:hidden;"><div style="display:flex;align-items:center;gap:6px;padding:7px 9px;border-bottom:1px solid #111;"><div style="width:18px;height:18px;border-radius:50%;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);flex-shrink:0;"></div><div><div style="font-family:var(--font-sans);font-size:7px;font-weight:700;color:#fff;">aimarketingng</div><div style="font-family:var(--font-sans);font-size:5.5px;color:#888;">Sponsored</div></div></div><div style="flex:1;background:#0d0d0d;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:14px;"><div style="font-family:var(--font-head);font-size:26px;font-weight:700;color:var(--yellow);line-height:1;">₦387k</div><div style="font-family:var(--font-sans);font-size:7px;color:#fff;margin-top:2px;">Made in 30 days</div><div style="font-family:var(--font-sans);font-size:6px;color:#888;margin-top:1px;">Using only AI + a smartphone</div></div><div style="padding:7px 9px;"><div style="font-family:var(--font-sans);font-size:6.5px;color:#fff;line-height:1.5;"><strong>aimarketingng</strong> Learn the exact system → Join link in bio</div></div></div>',
+    /* funnel 2 */
+    '<div class="pgc pgc-dark" style="align-items:center;"><div style="font-family:var(--font-sans);font-size:7px;font-weight:700;color:var(--yellow);margin-bottom:6px;text-align:center;">Your AI Sales Machine</div><div class="pgc-funnel"><div class="pgf-step pgf1" style="font-size:6px;">🧠 AI Writes Your Ads</div><div class="pgf-arr" style="color:#444;">↓</div><div class="pgf-step pgf2" style="font-size:6px;">🖥 AI Builds Landing Page</div><div class="pgf-arr" style="color:#444;">↓</div><div class="pgf-step pgf3" style="font-size:6px;">✉ AI Sends Email Sequence</div><div class="pgf-arr" style="color:#444;">↓</div><div class="pgf-step pgf4" style="font-size:6px;">💬 AI Chatbot Closes Sales</div><div class="pgf-arr" style="color:#444;">↓</div><div class="pgf-step pgf5" style="font-size:6px;">💰 YOU COLLECT THE MONEY</div></div></div>',
+    /* live notif 2 */
+    '<div class="pgc pgc-dark" style="padding:12px;"><div style="font-family:var(--font-sans);font-size:6.5px;color:var(--yellow);text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:8px;">🔴 Live Sales Today</div><div class="pgc-notif"><div class="pgc-notif-dot"></div><div class="pgc-notif-text"><strong>Ifeoma O.</strong> just closed a <strong style="color:#1e8c45;">₦75,000</strong> client</div><div class="pgc-notif-time">4m ago</div></div><div class="pgc-notif"><div class="pgc-notif-dot"></div><div class="pgc-notif-text"><strong>Seun B.</strong> made <strong style="color:#1e8c45;">₦33k</strong> from first ad</div><div class="pgc-notif-time">9m ago</div></div><div class="pgc-notif"><div class="pgc-notif-dot"></div><div class="pgc-notif-text"><strong>Adaeze N.</strong> 3× ROAS on campaign</div><div class="pgc-notif-time">17m ago</div></div><div class="pgc-notif"><div class="pgc-notif-dot"></div><div class="pgc-notif-text"><strong>Chuka M.</strong> launched funnel in 2hrs</div><div class="pgc-notif-time">31m ago</div></div></div>',
+    /* testi 4 */
+    '<div class="pgc pgc-cream pgc-testi"><div class="pgc-stars">★★★★★</div><div class="pgc-quote">"The AI email sequence module alone made me <strong>₦187,000 in 4 days.</strong> I did not believe it until I checked my bank account three times."</div><div class="pgc-author"><div class="pgc-av" style="background:#D72638;">CA</div><div><div class="pgc-name">Chidera Aneke</div><div class="pgc-role">Digital Marketer · Enugu</div></div></div></div>',
+    /* ad creative 2 */
+    '<div class="pgc pgc-dark" style="background:#0d0d1a;"><div><div class="pgc-ad-tag">Facebook Ads · Nigeria</div><div class="pgc-ad-h">Stop Guessing.<br>Start <span class="yl">Earning with AI.</span></div><div class="pgc-ad-sub">The class 3,200+ Nigerians used to build income online</div><div class="pgc-ad-pills"><div class="pgc-ad-pill">✓ Beginners welcome</div><div class="pgc-ad-pill">✓ Phone only</div><div class="pgc-ad-pill">✓ 21 days</div></div></div><div class="pgc-cta" style="margin-top:8px;width:fit-content;">Enroll Now · ₦15,000 →</div></div>',
+    /* analytics 2 */
+    '<div class="pgc pgc-cream"><div style="font-family:var(--font-sans);font-size:7px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;">Campaign Results — Week 1</div><div class="pgc-an-row"><div class="pgc-an-lbl">Impressions</div><div class="pgc-an-bw"><div class="pgc-an-bf" style="width:95%;background:#1a6eb5;"></div></div><div class="pgc-an-val">82k</div></div><div class="pgc-an-row"><div class="pgc-an-lbl">Clicks</div><div class="pgc-an-bw"><div class="pgc-an-bf" style="width:72%;background:var(--red);"></div></div><div class="pgc-an-val">4.8k</div></div><div class="pgc-an-row"><div class="pgc-an-lbl">Leads</div><div class="pgc-an-bw"><div class="pgc-an-bf" style="width:50%;background:var(--yellow);"></div></div><div class="pgc-an-val">2.1k</div></div><div class="pgc-an-row"><div class="pgc-an-lbl">Revenue</div><div class="pgc-an-bw"><div class="pgc-an-bf" style="width:88%;background:#1e8c45;"></div></div><div class="pgc-an-val">₦387k</div></div><div class="pgc-an-row"><div class="pgc-an-lbl">ROAS</div><div class="pgc-an-bw"><div class="pgc-an-bf" style="width:65%;background:#c9a227;"></div></div><div class="pgc-an-val">5.2×</div></div></div>',
+    /* wa win 4 */
+    '<div class="pgc pgc-wa" style="display:flex;flex-direction:column;"><div class="pgc-wa-header"><div class="pgc-wa-av"></div><div><div class="pgc-wa-name">Prince (Instructor)</div><div class="pgc-wa-st">online</div></div></div><div class="pgc-msg pgc-msg-in">Sir I just got my first ₦50k retainer client. The proposal template from module 9 worked perfectly. Thank you so much 🙏</div><div class="pgc-msg pgc-msg-out">You did the work. That is all you. Well done!! ✓✓</div><div class="pgc-msg pgc-msg-in">Referring 3 friends. This class is worth 10×</div></div>',
+    /* testi 5 */
+    '<div class="pgc pgc-cream pgc-testi"><div class="pgc-stars">★★★★★</div><div class="pgc-quote">"I used to spend ₦80k on a social media manager. Now I use AI and spend ₦0. My content is better AND I made <strong>₦450,000</strong> from ads in 3 months."</div><div class="pgc-author"><div class="pgc-av" style="background:#1a6eb5;">NI</div><div><div class="pgc-name">Ngozi Ikenna</div><div class="pgc-role">Business Owner · Abuja</div></div></div></div>',
+    /* big transfer 2 */
+    '<div class="pgc pgc-dash"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><span style="font-family:var(--font-sans);font-size:7.5px;font-weight:700;color:#111;">Palmpay</span><span style="font-family:var(--font-sans);font-size:6px;background:#1e8c45;color:#fff;padding:2px 6px;border-radius:20px;">● Live</span></div><div class="pgc-money-big"><span class="cur">₦</span><span class="amt">210,000</span><div class="lbl">received this month</div></div><div style="margin-top:6px;"><div class="pgc-txn"><div><div class="pgc-txn-name">Funnel Sales — AutoPilot</div><div class="pgc-txn-time">Today 9:15 AM</div></div><div class="pgc-txn-amt">+₦90,000</div></div><div class="pgc-txn"><div><div class="pgc-txn-name">Client Retainer</div><div class="pgc-txn-time">Yesterday</div></div><div class="pgc-txn-amt">+₦75,000</div></div><div class="pgc-txn"><div><div class="pgc-txn-name">Course Commission</div><div class="pgc-txn-time">2 days ago</div></div><div class="pgc-txn-amt">+₦45,000</div></div></div></div>'
+  ];
+  function makeCard2(html) {
+    var d = document.createElement('div');
+    d.className = 'pg-card';
+    d.innerHTML = html;
+    return d;
+  }
+  function fillPgRow2(id, start, count, rev) {
+    var row = document.getElementById(id);
+    var sel = [];
+    for (var i = 0; i < count; i++) sel.push(cards2[(start + i) % cards2.length]);
+    if (rev) sel.reverse();
+    sel.concat(sel).forEach(function(h){ row.appendChild(makeCard2(h)); });
+  }
+  fillPgRow2('pg2-r1', 0, 7, false);
+  fillPgRow2('pg2-r2', 5, 7, true);
+})();
+</script>
+
+<!-- ================================================================
+     D — DESIRE
+     ================================================================ -->
+
+<hr class="divider-red">
+
+<section>
+  <span class="section-label">Why a Live Class Changes Everything</span>
+
+  <h2>A Course You Buy and Forget Is Worth Nothing. This Is Different.</h2>
+
+  <p>I have watched people buy courses, download them, and never open them again. The information was good. The discipline was not there. Nobody was watching.</p>
+
+  <p>This is a class. Everyone in this intake moves through the material at the same time. Structured sessions, real deadlines, and a group of people doing the same work you are doing.</p>
+
+  <div class="pull-quote">
+    <p>The difference between a course and a class is the difference between a gym membership and a training partner who shows up at your door at 6 AM. One of these gets results.</p>
+  </div>
+
+  <p>Every person in this intake gets:</p>
+
+  <ul class="benefit-list">
+    <li>Live sessions where you ask questions in real time — not watch a recording at midnight</li>
+    <li>A structured schedule that builds momentum instead of letting you drift</li>
+    <li>Direct access to me throughout the class — not a ticket system, not a bot</li>
+    <li>A group of Nigerian marketers, sellers, and creators building in the same environment you are</li>
+    <li>Accountability checkpoints so you actually apply what you learn</li>
+  </ul>
+
+  <p>You are not buying content. You are buying <strong>a system and the people who will hold you to it.</strong></p>
+</section>
+
+<hr class="divider">
+
+<!-- HOW YOUR FUNNEL WORKS -->
+<section>
+  <span class="section-label">How It Works</span>
+  <h2>Your AI Sales Funnel. Automated from Start to Sale.</h2>
+  <p>This is the exact system you will build inside this class. Every step powered by AI. You just collect the revenue.</p>
+
+  <div class="funnel-section">
+    <h3>Your AI Sales Machine</h3>
+    <p class="funnel-sub">Every step automated. You just collect the money.</p>
+    <div class="funnel-wrap">
+      <div class="f-step f1"><div><div class="f-title">Attract</div><div class="f-desc">AI ads & content pull in traffic</div></div><div class="f-num">10,000 visitors</div></div>
+      <div class="f-arr">↓</div>
+      <div class="f-step f2"><div><div class="f-title">Capture</div><div class="f-desc">AI landing page converts visitors</div></div><div class="f-num">3,000 leads</div></div>
+      <div class="f-arr">↓</div>
+      <div class="f-step f3"><div><div class="f-title">Nurture</div><div class="f-desc">AI email sequences build trust fast</div></div><div class="f-num">1,200 warm</div></div>
+      <div class="f-arr">↓</div>
+      <div class="f-step f4"><div><div class="f-title">Convert</div><div class="f-desc">AI chatbot closes the sale</div></div><div class="f-num">400 buyers</div></div>
+      <div class="f-arr">↓</div>
+      <div class="f-step f5"><div><div class="f-title">Retain</div><div class="f-desc">AI upsells keep customers returning</div></div><div class="f-num">Repeat sales 🎯</div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- WHO THIS IS FOR -->
+<section>
+  <span class="section-label">Who This Class Is For</span>
+
+  <h2>You Do Not Need to Know Anything About AI to Join.</h2>
+
+  <p>This class was built for two types of people.</p>
+
+  <p>The first has heard of AI — ChatGPT, maybe a few other tools — but has no system for using it profitably. They copy prompts from the internet, get mediocre results, and give up.</p>
+
+  <p>The second has never touched AI at all. They think it is complicated. They think it is not for them. They are wrong on both counts — and this class will prove it.</p>
+
+  <div class="audience-grid">
+    <div class="audience-card">
+      <span class="icon">🛍️</span>
+      <strong>Business Owners</strong>
+      Build a marketing system that runs without a full team
+    </div>
+    <div class="audience-card">
+      <span class="icon">🎨</span>
+      <strong>Creators & Freelancers</strong>
+      Turn your content or skills into consistent income
+    </div>
+    <div class="audience-card">
+      <span class="icon">🆕</span>
+      <strong>Complete Beginners</strong>
+      Go from zero to your first sale in 21 days
+    </div>
+    <div class="audience-card">
+      <span class="icon">📈</span>
+      <strong>Side Hustlers</strong>
+      Add a serious income stream without quitting your job
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CURRICULUM -->
+<section>
+  <span class="section-label">What You Will Learn</span>
+  <h2>12 Modules. Structured. Practical. Built Around Results.</h2>
+
+  <p>Every module teaches you one complete skill — and shows you exactly how to use it to make money. Nothing theoretical. Everything applied.</p>
+
+  <ul class="module-list">
+    <li><strong>Module 1: AI Foundations for Marketers</strong> — What the tools are, how they think, and how to talk to them to get exactly what you need.</li>
+    <li><strong>Module 2: Copywriting with AI</strong> — Write headlines, captions, and sales messages that stop the scroll and drive action.</li>
+    <li><strong>Module 3: Content Strategy & Planning</strong> — Build a 30-day content calendar from a single brief. Post consistently without burning out.</li>
+    <li><strong>Module 4: Landing Pages That Convert</strong> — Design and write pages that turn visitors into buyers — no tech skills needed.</li>
+    <li><strong>Module 5: Email Marketing with AI</strong> — Create 7-email sequences that nurture leads and close sales automatically.</li>
+    <li><strong>Module 6: Social Media Ads with AI</strong> — Run effective Facebook and Instagram ads. AI writes the copy. You review and launch.</li>
+    <li><strong>Module 7: Finding & Validating Products</strong> — How to identify winners before you spend a naira promoting them.</li>
+    <li><strong>Module 8: Affiliate Marketing</strong> — Earn commissions promoting products you did not create. No inventory. No storage.</li>
+    <li><strong>Module 9: AI Chatbots & Automation</strong> — Set up systems that follow up, qualify leads, and close sales while you sleep.</li>
+    <li><strong>Module 10: Analytics & Optimization</strong> — Read your numbers. Know what is working. Cut what is not. Scale what is.</li>
+    <li><strong>Module 11: Selling Your Services as a Marketer</strong> — Package what you now know and sell it to businesses at ₦50k–₦200k per month.</li>
+    <li><strong>Module 12: Building Your 30-Day Launch Plan</strong> — A complete, custom plan to execute everything you have learned starting the day class ends.</li>
+  </ul>
+</section>
+
+<hr class="divider">
+
+<!-- REAL RESULTS -->
+<section>
+  <span class="section-label">Real People. Real Results.</span>
+  <h2>These Are Not Cherry-Picked. This Is What Happens When the System Works.</h2>
+
+  <div class="proof-block">
+    <p>I had no product. Used the affiliate method they taught. Made my first income in 3 weeks. I still cannot believe it was that simple.</p>
+    <div class="proof-name">Amaka O. — E-commerce founder, Lagos</div>
+  </div>
+
+  <div class="proof-block">
+    <p>AI wrote all my ads. I built the funnel in a weekend. My clients ask how I produce results so fast. The answer is this class.</p>
+    <div class="proof-name">Tunde B. — Freelance marketer</div>
+  </div>
+
+  <div class="proof-block">
+    <p>₦187,000 in 4 days from a 7-email sequence I built in one afternoon. This is not hype. This is the system.</p>
+    <div class="proof-name">Chidera A. — Course creator</div>
+  </div>
+
+  <div class="proof-block">
+    <p>Revenue went from ₦280k to ₦400k per month in 60 days. I was skeptical. The results were not.</p>
+    <div class="proof-name">Emeka T. — Online business owner</div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- COUNTDOWN TIMER -->
+<div id="inline-timer-wrap" style="background:linear-gradient(135deg,#1a0a0a 0%,#0d0d0d 100%);border:2px solid var(--red);border-radius:10px;padding:28px 20px;margin:36px 0;text-align:center;">
+  <div style="font-family:var(--font-sans);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:10px;">⚠ This Intake Closes In</div>
+  <div style="display:flex;justify-content:center;align-items:center;gap:6px;flex-wrap:wrap;">
+    <div style="text-align:center;min-width:70px;"><div id="it-days" style="font-family:var(--font-head);font-size:clamp(40px,8vw,64px);font-weight:700;color:var(--yellow);line-height:1;">03</div><div style="font-family:var(--font-sans);font-size:11px;color:#666;text-transform:uppercase;letter-spacing:.08em;margin-top:4px;">Days</div></div>
+    <span style="font-family:var(--font-head);font-size:clamp(28px,6vw,48px);color:#333;font-weight:700;padding-bottom:16px;">:</span>
+    <div style="text-align:center;min-width:70px;"><div id="it-hours" style="font-family:var(--font-head);font-size:clamp(40px,8vw,64px);font-weight:700;color:var(--yellow);line-height:1;">00</div><div style="font-family:var(--font-sans);font-size:11px;color:#666;text-transform:uppercase;letter-spacing:.08em;margin-top:4px;">Hours</div></div>
+    <span style="font-family:var(--font-head);font-size:clamp(28px,6vw,48px);color:#333;font-weight:700;padding-bottom:16px;">:</span>
+    <div style="text-align:center;min-width:70px;"><div id="it-mins" style="font-family:var(--font-head);font-size:clamp(40px,8vw,64px);font-weight:700;color:var(--yellow);line-height:1;">00</div><div style="font-family:var(--font-sans);font-size:11px;color:#666;text-transform:uppercase;letter-spacing:.08em;margin-top:4px;">Mins</div></div>
+    <span style="font-family:var(--font-head);font-size:clamp(28px,6vw,48px);color:#333;font-weight:700;padding-bottom:16px;">:</span>
+    <div style="text-align:center;min-width:70px;"><div id="it-secs" style="font-family:var(--font-head);font-size:clamp(40px,8vw,64px);font-weight:700;color:var(--red);line-height:1;">00</div><div style="font-family:var(--font-sans);font-size:11px;color:#666;text-transform:uppercase;letter-spacing:.08em;margin-top:4px;">Secs</div></div>
+  </div>
+  <p style="font-family:var(--font-sans);font-size:13px;color:#888;margin:14px 0 0;line-height:1.6;">When this timer hits zero, this price is gone. The next intake — if there is one — will cost more.</p>
+  <button onclick="openPsModal()" class="cta-btn" style="max-width:380px;margin:18px auto 0;font-size:17px;padding:16px 20px;">Secure My Slot Before Time Runs Out<span class="sub-line">₦15,000 · Card · Transfer · USSD</span></button>
+</div>
+
+<script>
+(function() {
+  var KEY2 = 'aimc_intake_end', cv2 = null;
+  var cookies2 = document.cookie.split(';');
+  for (var i = 0; i < cookies2.length; i++) {
+    var c = cookies2[i].trim();
+    if (c.indexOf(KEY2 + '=') === 0) { cv2 = c.substring(KEY2.length + 1); break; }
+  }
+  if (!cv2) {
+    var end2 = new Date(Date.now() + 3 * 24 * 60 * 60 * 1000);
+    cv2 = end2.toISOString();
+    document.cookie = KEY2 + '=' + cv2 + '; path=/; max-age=' + (3 * 24 * 3600);
+  }
+  var endTime2 = new Date(cv2).getTime();
+  function tick2() {
+    var diff = Math.max(0, endTime2 - Date.now());
+    var d = Math.floor(diff / 86400000);
+    var h = Math.floor((diff % 86400000) / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    var s = Math.floor((diff % 60000) / 1000);
+    var pad = function(n){ return n < 10 ? '0' + n : '' + n; };
+    var ed = document.getElementById('it-days'), eh = document.getElementById('it-hours');
+    var em = document.getElementById('it-mins'), es = document.getElementById('it-secs');
+    if(ed) ed.textContent = pad(d);
+    if(eh) eh.textContent = pad(h);
+    if(em) em.textContent = pad(m);
+    if(es) es.textContent = pad(s);
+  }
+  tick2();
+  setInterval(tick2, 1000);
+})();
+</script>
+
+<!-- ================================================================
+     A — ACTION
+     ================================================================ -->
+
+<hr class="divider-red">
+
+<!-- PRICE & OFFER -->
+<section>
+  <span class="section-label">Join the Class</span>
+
+  <h2>Everything Included. One Price. No Hidden Fees.</h2>
+
+  <p>This is not a subscription. Not a waiting list. When you join, you are in — and everything below is yours immediately.</p>
+
+  <div class="price-box">
+    <div class="was">Normal price: ₦25,000</div>
+    <div class="now">₦15,000</div>
+    <div class="label">Early intake price — limited slots only</div>
+    <div class="includes">
+      <span>12 structured modules covering every part of AI digital marketing</span>
+      <span>Live sessions with Q&amp;A — ask questions, get real answers</span>
+      <span>45-page AI Marketing Field Guide (yours to keep)</span>
+      <span>Direct WhatsApp access to your instructor throughout the class</span>
+      <span>Accountability checkpoints to keep you on track</span>
+      <span>Community of Nigerian marketers building alongside you</span>
+      <span>Lifetime access to class materials and future updates</span>
+    </div>
+
+    <button onclick="openPsModal()" class="cta-btn" style="font-size:20px;padding:22px 28px;">
+      Yes, I Want to Learn AI Digital Marketing
+      <span class="sub-line">Get instant access for ₦15,000 · Slots almost gone</span>
+    </button>
+    <p class="scarcity" style="margin-top:14px;">⚠ After this intake closes, the next price will be higher.</p>
+  </div>
+
+  <div class="guarantee-box">
+    <div class="shield">🛡</div>
+    <div>
+      <h3>You Have Nothing to Lose</h3>
+      <p>If you show up, do the work, and complete the class without getting any result — reach out. We will make it right. That is how confident we are in this system.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- THE DECISION -->
+<section>
+  <span class="section-label">The Decision</span>
+
+  <h2>You Can Spend Two Years Learning This the Hard Way. Or 21 Days Learning It Right.</h2>
+
+  <p>This class is not for everyone.</p>
+
+  <p>It is for the person who has truly decided — that they want to use the internet to build income, attract customers, or grow a business.</p>
+
+  <p>It is for the person who is tired of watching others get results and wondering what they are doing differently.</p>
+
+  <p>The difference, most of the time, is a system. And that is exactly what this class gives you.</p>
+
+  <div class="urgency-bar">
+    ⏳ Intake closes when remaining slots are filled. They are going fast.
+  </div>
+
+  <p>If you are a beginner — this class takes you from zero to your first sale.</p>
+
+  <p>If you own a business — this gives you a marketing system that runs without a full team.</p>
+
+  <p>If you are a creator — this shows you how to turn your content into consistent revenue.</p>
+
+  <p>Twenty-one days. One decision.</p>
+
+  <button onclick="openPsModal()" class="cta-btn" style="font-size:20px;padding:22px 28px;">
+    Yes, I Am Joining the Class · ₦15,000
+    <span class="sub-line">Secure your slot now before this intake closes</span>
+  </button>
+  <p class="scarcity" style="margin-top:14px;">⚠ Once this intake is full, the next price will be higher.</p>
+</section>
+
+<hr class="divider">
+
+<!-- FAQ -->
+<section>
+  <span class="section-label">Questions</span>
+  <h2>A Few Things People Ask Before Joining</h2>
+
+  <div class="faq-item">
+    <h3>Do I need experience with AI or marketing?</h3>
+    <p>None at all. The class starts from the absolute beginning. If you can send a WhatsApp message, you have enough technical skill to start.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>What tools do I need?</h3>
+    <p>A smartphone and internet access. That is all. Every tool we use has a free tier that works perfectly for beginners.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>How long do I have access to the class materials?</h3>
+    <p>Indefinitely. Once you join, the materials are yours. All updates are included at no extra cost.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>I have tried AI tools before and got poor results. Will this be different?</h3>
+    <p>That is the most common profile of a person who benefits most from this class. Poor results from AI usually come from poor input — and that is exactly what we fix here.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Is the ₦15,000 price permanent?</h3>
+    <p>No. It is an early intake price. When slots fill or the intake closes, the next price will be higher. There is no guarantee this price returns.</p>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section style="text-align:center;padding-bottom:60px;">
+  <h2 style="max-width:480px;margin:0 auto 18px;">Make the Decision. Join the Class.</h2>
+  <p style="max-width:440px;margin:0 auto 28px;color:var(--mid);font-family:var(--font-sans);font-size:16px;">
+    12 modules. Live sessions. 45-page field guide. 21 days of structured, accountable work.
+  </p>
+  <button onclick="openPsModal()" class="cta-btn" style="max-width:480px;margin:0 auto;font-size:19px;padding:22px;">
+    Join the Class Now. ₦15,000 →
+    <span class="sub-line">Live Sessions · Direct Access · Closes When Full</span>
+  </button>
+  <p class="scarcity" style="margin-top:16px;">⚠ Remaining slots: <strong style="color:var(--red);">Almost Full. Register now to secure your place.</strong></p>
+
+  <div style="margin-top:44px;background:var(--white);border:1.5px solid var(--border);border-radius:8px;padding:22px 20px;max-width:400px;margin:44px auto 0;">
+    <p style="font-family:var(--font-sans);font-size:13px;font-weight:700;color:var(--black);margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em;">Have a Question Before Joining?</p>
+    <p style="font-family:var(--font-sans);font-size:14px;color:var(--mid);margin-bottom:14px;line-height:1.6;">Send a message on WhatsApp. I respond personally.</p>
+    <a href="https://wa.me/2349066234662?text=Hi%2C+I+have+a+question+about+the+AI+Marketing+Masterclass" style="display:block;background:#25D366;color:#fff;text-decoration:none;text-align:center;padding:13px 20px;border-radius:6px;font-family:var(--font-sans);font-size:15px;font-weight:700;">
+      💬 WhatsApp: 09066234662
+    </a>
+  </div>
+</section>
+
+</div><!-- /page -->
+</main>
+
+<!-- STICKY MOBILE CTA -->
+<button class="sticky-cta" onclick="openPsModal()">Join Now · ₦15,000 →</button>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 AI Marketing Masterclass · All Rights Reserved</p>
+  <p style="margin-top:8px;">
+    Results shown are real. Individual outcomes depend on application and effort.
+    This class teaches tools and strategy — success requires your participation.
+  </p>
+  <p style="margin-top:8px;">
+    <a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms</a> &nbsp;·&nbsp;
+    <a href="https://wa.me/2349066234662">WhatsApp: 09066234662</a>
+  </p>
+</footer>
+
+<script>
+// WHAT YOU'LL LEARN SCROLL STRIP
+const topics = [
+  { icon: "🤖", title: "Prompt Writing", sub: "Talk to AI like a pro" },
+  { icon: "🖥️", title: "Landing Pages", sub: "Pages that convert" },
+  { icon: "📱", title: "Ad Creatives", sub: "Scroll-stopping visuals" },
+  { icon: "🔍", title: "SEO with AI", sub: "Rank on Google faster" },
+  { icon: "💬", title: "AI Chatbots", sub: "Close sales 24/7" },
+  { icon: "📊", title: "Analytics AI", sub: "Understand your data" },
+  { icon: "🎯", title: "Targeting", sub: "Reach the right people" },
+  { icon: "✍️", title: "AI Copywriting", sub: "Words that sell" },
+  { icon: "🛒", title: "Sales Funnels", sub: "Automate your sales" },
+  { icon: "⚡", title: "Automation", sub: "Work less, earn more" },
+  { icon: "🔗", title: "Affiliate Marketing", sub: "Earn without a product" },
+  { icon: "💰", title: "Product Finding", sub: "Spot winners fast" },
+];
+const track = document.getElementById('track');
+[...topics, ...topics].forEach(function(t) {
+  var el = document.createElement('div');
+  el.className = 'learn-pill';
+  el.innerHTML = '<span class="pill-icon">' + t.icon + '</span><div><div class="pill-text">' + t.title + '</div><div class="pill-sub">' + t.sub + '</div></div>';
+  track.appendChild(el);
+});
+</script>
+
+</body>
+</html>
